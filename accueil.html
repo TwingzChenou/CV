@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon CV - Quentin Forget</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Menu fixe -->
+  <nav class="navbar">
+    <a href="#accueil" class="btn-nav">Accueil</a>
+    <a href="#projets" class="btn-nav">Projets</a>
+    <a href="#experiences" class="btn-nav">Expériences</a>
+    <a href="#contact" class="btn-nav">Contact</a>
+  </nav>
+
+    <!-- Accueil -->
+
+    <div class="fade-in"> 
+
+        <section id="accueil" class="section">
+            
+            <div class="container-accueil">
+            
+                <!-- Photo de profil dans le flux du body -->
+                <img src="images/Photo_cv.jpeg" alt="Photo de Quentin Forget" class="photo-profil">
+
+                <!-- Contenu principal -->
+                <div class="container">
+
+                    <header>
+                    <h1 class="fade-in delay-1"> Quentin Forget</h1>
+                    <p class="fade-in delay-2"> Data Scientist | AI</p>
+                    </header>
+
+                    <p class="fade-in delay-3">
+                        Diplômé en Data Science, j’ai acquis 2 ans d’expérience en tant qu’analyste de données au sein de la branche immobilière du Groupe CACIB.
+                        Actuellement, je mène un projet personnel ambitieux : la création d’une application de conseil en investissement boursier, capable de recommander des portefeuilles adaptés à différents profils de risque, en s’appuyant sur des modèles de deep learning.
+                        Ce projet me permet d’élargir mes compétences en IA, en développement full stack et en modélisation comportementale.
+                        Je cherche à évoluer dans un poste Full Stack AI mêlant modélisation avancée, développement d’API et intégration de modèles ML/DL dans des applications réelles.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Projets -->
+    <div class="fade-in">
+
+        <section id="projets" class="section">
+
+            <header>
+                <h1 class="fade-in delay-1"> Projets </h1>
+            </header>
+
+
+
+            <!-- Menu vertical -->
+            <div class="projets-menu">
+                <button class="projet-btn" data-projet="projet1">Projet 1</button>
+                <button class="projet-btn" data-projet="projet2">Projet 2</button>
+                <button class="projet-btn" data-projet="projet3">Projet 3</button>
+            </div>
+
+
+                <div class="projets-container">
+                    
+                    <!-- Contenu dynamique -->
+                    <div class="projets-details">
+                        <div class="projet-detail" id="projet1">
+                        <h3> Trading Bot </h3>
+                        <h4> Projet de création d'un bot de trading basé sur des performances de deep learning. Le but est d'automatiser l'achat et la vente d'action
+                            à partir des décisions prises par un algorithme de Deep Learning.
+                        </h4>
+                        </div>
+
+                        <div class="projet-detail" id="projet2">
+                        <h3>Projet 2</h3>
+                        <p>Description du projet 2...</p>
+                        </div>
+
+                        <div class="projet-detail" id="projet3">
+                        <h3>Projet 3</h3>
+                        <p>Description du projet 3...</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+<script>
+    const buttons = document.querySelectorAll(".projet-btn");
+    const projets = document.querySelectorAll(".projet-detail");
+    
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+        const targetId = btn.dataset.projet;
+    
+        // Masquer tous les projets
+        projets.forEach(p => {
+            p.classList.remove("active");
+        });
+    
+        // Afficher le projet sélectionné
+        document.getElementById(targetId).classList.add("active");
+        });
+    });
+    </script>
+
+        <!-- Experience -->
+        <section id="experiences" class="section">
+            <h2>Expériences</h2>
+            <p>Credit Agricole</p>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email : quentin@example.com</p>
+        </section>
+    
+
+
+</body>
+</html>
